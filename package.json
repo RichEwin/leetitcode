@@ -1,0 +1,14 @@
+{
+  "name": "leetitcode",
+  "version": "1.0.0",
+  "description": "Solving some coding problems",
+  "main": "app.js",
+  "scripts": {
+      "test": "vitest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^3.1.4"
+  }
+}
