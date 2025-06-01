@@ -1,6 +1,6 @@
-import { expect, test } from 'vitest'
-import { sum } from './app.js'
+import { expect, test } from "vitest";
+import { flatten } from "./app.js";
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3)
-})
+test("flatten", () => {
+	expect(flatten([1, 2, 3, [4, 5]])).toStrictEqual([1, 2, 3, 4, 5]);
+});

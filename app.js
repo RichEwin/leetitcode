@@ -1,5 +1,9 @@
 // node --watch app.js
 
-export function sum(a, b) {
-  return a + b
+export function flatten(array) {
+	if (typeof array !== "object" || array === null) {
+		return array;
+	}
+
+	return array.reduce((acc, prevValue) => acc.concat(prevValue), []);
 }
