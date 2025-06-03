@@ -29,3 +29,10 @@ export function accumulateStrings(string) {
     .repeat(index)))
     .join("-")
 }
+
+export function sumDigits(number) {
+    return Math.abs(number)
+    .toString()
+    .split("")
+    .reduce((acc, currValue) => (acc) + Number(currValue), 0)
+}
