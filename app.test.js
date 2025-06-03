@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { flatten, plusOne, sorted, twoSum } from "./app.js";
+import { accumulateStrings, flatten, sorted, twoSum } from "./app.js";
 
 test("flatten", () => {
 	expect(flatten([1, 2, 3, [4, 5]])).toStrictEqual([1, 2, 3, 4, 5]);
@@ -15,3 +15,6 @@ test("twoSum", () => {
   expect(twoSum([7, 3, 11, 15], 10)).toStrictEqual([0, 1]);
 });
 
+test("accumulateStrings", () => {
+  expect(accumulateStrings("abcd")).toEqual("A-Bb-Ccc-Dddd")
+})

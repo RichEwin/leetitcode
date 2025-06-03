@@ -21,3 +21,11 @@ export function twoSum(array, target) {
 		}
 	}
 }
+
+export function accumulateStrings(string) {
+    const splitString = string.split("")
+    return splitString
+    .map((item, index) => (item.toUpperCase() + item.toLowerCase()
+    .repeat(index)))
+    .join("-")
+}
