@@ -36,3 +36,7 @@ export function sumDigits(number) {
     .split("")
     .reduce((acc, currValue) => (acc) + Number(currValue), 0)
 }
+
+export function lengthOfLastWord(word) {
+	return word.trim().split(" ").at(-1).length
+}
