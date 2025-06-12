@@ -40,3 +40,34 @@ export function sumDigits(number) {
 export function lengthOfLastWord(word) {
 	return word.trim().split(" ").at(-1).length
 }
+
+export function removeDuplicatesFromList(list) {
+	if(!list) return []
+	const newList = []
+	list.forEach((item) => {
+		if (!newList.includes(item)) 
+			newList.push(item)
+	})
+
+	return newList
+}
+
+export function alternateCapitalize(string) {
+	const list = [[],[]]
+
+	string.split("").forEach((item, index) => {
+		index % 2 === 0 ? 
+		list[0].push(item.toUpperCase()) : 
+		list[0].push(item)
+	})
+	
+
+	string.split("").forEach((item, index) => {
+		index % 2 !== 0 ?
+		list[1].push(item.toUpperCase()) :
+		list[1].push(item)
+	})
+	
+	
+	return [list[0].join(""), list[1].join("")]
+}

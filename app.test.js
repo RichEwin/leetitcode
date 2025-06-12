@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { accumulateStrings, flatten, lengthOfLastWord, sorted, sumDigits, twoSum } from "./app.js";
+import { accumulateStrings, alternateCapitalize, flatten, lengthOfLastWord, removeDuplicatesFromList, sorted, sumDigits, twoSum } from "./app.js";
 
 test("flatten", () => {
 	expect(flatten([1, 2, 3, [4, 5]])).toStrictEqual([1, 2, 3, 4, 5]);
@@ -28,4 +28,15 @@ test("sumDigits", () => {
 test("lengthOfLastWord", () => {
   expect(lengthOfLastWord("Hello World")).toEqual(5)
   expect(lengthOfLastWord("   fly me   to   the moon  ")).toEqual(4)
+})
+
+test("removeDuplicatesFromList", () => {
+  expect(removeDuplicatesFromList([1,1,2])).toEqual([1,2])
+  expect(removeDuplicatesFromList([1,1,2,3,3])).toEqual([1,2,3])
+  expect(removeDuplicatesFromList([])).toEqual([])
+  expect(removeDuplicatesFromList(null)).toEqual([])
+})
+
+test("alternateCapitalize", () => {
+  expect(alternateCapitalize("abcdef")).toEqual(['AbCdEf', 'aBcDeF'])
 })
