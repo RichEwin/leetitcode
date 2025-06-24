@@ -71,3 +71,12 @@ export function alternateCapitalize(string) {
 	
 	return [list[0].join(""), list[1].join("")]
 }
+
+export function findUnique(list) {
+	const sortedList = list.sort()
+	
+	if (sortedList[0] !== sortedList[1]) {
+		return sortedList[0]
+	} 
+		return sortedList.at(-1)
+}
