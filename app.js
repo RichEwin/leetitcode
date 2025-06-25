@@ -80,3 +80,16 @@ export function findUnique(list) {
 	} 
 		return sortedList.at(-1)
 }
+
+export function greaterThan10(list) {
+	const greaterThan10 = []
+	
+	list.forEach((item) => {
+		if(item > 10) {
+			greaterThan10.push(item)
+		}
+	})
+
+	return greaterThan10
+}
+
