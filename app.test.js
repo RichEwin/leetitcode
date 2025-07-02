@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { accumulateStrings, alternateCapitalize, findUnique, flatten, greaterThan10, lengthOfLastWord, plusOne, removeDuplicatesFromList, sorted, sumDigits, twoSum } from "./app.js";
+import { accumulateStrings, alternateCapitalize, findUnique, flatten, greaterThan10, last, lengthOfLastWord, plusOne, removeDuplicatesFromList, sleep, sorted, sumDigits, twoSum } from "./app.js";
 
 test("flatten", () => {
 	expect(flatten([1, 2, 3, [4, 5]])).toStrictEqual([1, 2, 3, 4, 5]);
@@ -51,3 +51,11 @@ test("greaterThan10", () => {
   expect(greaterThan10([0,10,20,30])).toEqual([20,30])
 })
 
+test("last", () => {
+  expect(last([])).toEqual(-1)
+  expect(last([null, {}, 3])).toEqual(3)
+})
+
+test("sleep", async () => {
+  expect(await sleep(100)).toEqual(100)
+})

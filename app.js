@@ -93,3 +93,14 @@ export function greaterThan10(list) {
 	return greaterThan10
 }
 
+export function last(list) {
+	if(list.length === 0) {
+		return -1
+	}
+	return list.at(-1)
+}
+
+export async function sleep(millis) {
+	return new Promise((resolve) => setTimeout(resolve(millis), millis))
+}
+
